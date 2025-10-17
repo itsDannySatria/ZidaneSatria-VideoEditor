@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Zidane Satria — Video Editor</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Theme switch -->
+  <div class="switch-wrap" aria-hidden="false">
+    <label class="switch" title="Toggle theme">
+      <input id="themeSwitch" type="checkbox" />
+      <span class="slider" aria-hidden="true"></span>
+    </label>
+  </div>
+
+  <!-- Main Card -->
+  <main class="page">
+      <section class="card" role="region" aria-label="Profil Zidane Satria">
+        <div class="profile-pic">
+        <img src="images/pp.jpg" alt="Foto Profil">
+      </div>
+      <h1 class="name" tabindex="0">Zidane Satria</h1>
+      <div class="role">Video Editor</div>
+
+      <div class="top-buttons">
+        <button id="aboutBtn" class="btn accent">Tentang Saya</button>
+        <button id="portfolioBtn" class="btn accent">Portofolio</button>
+      </div>
+
+      <div class="bottom-buttons">
+        <a id="igBtn" class="btn social" href="#" target="_blank" rel="noopener">Instagram</a>
+        <a id="ttBtn" class="btn social" href="#" target="_blank" rel="noopener">TikTok</a>
+        <a id="emailBtn" class="btn social" href="mailto:your@email.com">Email</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Modal Tentang Saya -->
+  <div id="aboutOverlay" class="overlay" aria-hidden="true" role="dialog" aria-labelledby="aboutTitle">
+    <div class="modal" id="aboutModal" role="document">
+      <button class="modal-close" id="aboutClose" aria-label="Tutup">&times;</button>
+      <div class="modal-inner">
+        <div class="modal-left">
+          <h2 id="aboutTitle">Tentang Saya</h2>
+          <div id="bio" class="bio"></div>
+        </div>
+        <div class="modal-right">
+          <div id="profilePhoto" class="profile-photo"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Portofolio -->
+  <div id="portfolioOverlay" class="overlay" aria-hidden="true" role="dialog" aria-labelledby="portfolioTitle">
+    <div class="modal" id="portfolioModal" role="document">
+      <button class="modal-close" id="portfolioClose" aria-label="Tutup">&times;</button>
+      <div class="modal-inner portfolio-inner">
+        <h2 id="portfolioTitle">Portofolio</h2>
+        <div class="videos" id="videosContainer">
+          <div class="video-wrap"><video muted autoplay loop playsinline preload="metadata" src=""></video></div>
+          <div class="video-wrap"><video muted autoplay loop playsinline preload="metadata" src=""></video></div>
+          <div class="video-wrap"><video muted autoplay loop playsinline preload="metadata" src=""></video></div>
+        </div>
+        <div class="portfolio-actions">
+          <a id="seeMore" class="btn small" href="#" target="_blank" rel="noopener">Lihat Lainny</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
