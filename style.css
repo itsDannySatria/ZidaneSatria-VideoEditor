@@ -49,8 +49,7 @@ body.dark .switch{ background: rgba(255,255,255,0.06); border-color:rgba(255,255
 }
 .switch input:checked + .slider{ transform: translateX(24px) scale(1.1); background: linear-gradient(145deg,#4f2eff,#9a66ff); }
 
-/* ---------- CARD (Liquid Glass) ---------- */
-/* ---------- CARD (Flat Neon Style) ---------- */
+/* ---------- CARD ---------- */
 .card {
   width: 90%;
   max-width: 560px;
@@ -65,19 +64,14 @@ body.dark .switch{ background: rgba(255,255,255,0.06); border-color:rgba(255,255
   opacity: 0;
   animation: cardIn .6s cubic-bezier(.2,.9,.3,1) forwards .06s;
 }
-
 body.dark .card {
   background: var(--glass-dark);
   box-shadow: 0 12px 50px rgba(0,0,0,0.6);
 }
-
-/* hover halus */
 .card:hover {
   transform: scale(1.02);
   box-shadow: 0 18px 45px rgba(0,0,0,0.15);
 }
-
-/* neon accent efek lembut di pojok */
 .card::before {
   content: "";
   position: absolute;
@@ -89,15 +83,12 @@ body.dark .card {
   pointer-events: none;
   transition: opacity .4s ease;
 }
-
 body.dark .card::before {
   opacity: 0.7;
   background:
     radial-gradient(circle at 10% 20%, rgba(176,38,255,0.14), transparent 65%),
     radial-gradient(circle at 80% 80%, rgba(176,38,255,0.1), transparent 70%);
 }
-
-/* foto */
 
 /* ---------- PROFILE PHOTO ---------- */
 .profile-pic {
@@ -111,12 +102,10 @@ body.dark .card::before {
               0 6px 22px rgba(0,0,0,0.15);
   transition: transform .3s ease, box-shadow .3s ease;
 }
-
 body.dark .profile-pic {
   box-shadow: 0 0 0 3px rgba(255,255,255,0.1),
               0 0 25px rgba(176,38,255,0.25);
 }
-
 .profile-pic img {
   width: 100%;
   height: 100%;
@@ -124,11 +113,7 @@ body.dark .profile-pic {
   display: block;
   transition: transform .4s ease;
 }
-
-.profile-pic:hover img {
-  transform: scale(1.08);
-}
-
+.profile-pic:hover img { transform: scale(1.08); }
 .profile-pic::after {
   content: "";
   position: absolute;
@@ -138,13 +123,7 @@ body.dark .profile-pic {
   opacity: 0;
   transition: opacity .35s ease;
 }
-
-.profile-pic:hover::after {
-  opacity: 1;
-}
-
-
-/* foto */
+.profile-pic:hover::after { opacity: 1; }
 
 /* ---------- TEXT ---------- */
 .name{ font-size: clamp(1.6rem, 3.5vw, 2.6rem); font-weight:700; margin-bottom:6px; outline:none; }
@@ -178,9 +157,6 @@ body.dark .btn{ background: rgba(255,255,255,0.03); border-color: rgba(255,255,2
 }
 body.dark .btn.accent{ box-shadow: 0 0 18px rgba(176,38,255,0.35); }
 .btn.accent:hover{ transform: translateY(-6px) scale(1.03); }
-
-.btn.social{ min-width:100px; background:transparent; border:1px solid rgba(0,0,0,0.08); }
-.btn.social:hover{ background: linear-gradient(90deg, rgba(176,38,255,0.06), rgba(176,38,255,0.02)); color:var(--accent) }
 
 /* ---------- ANIMASI CARD ---------- */
 .card{ transform: translateY(10px) scale(.98); opacity:0; }
@@ -232,6 +208,25 @@ body.dark .modal-left{ border-right:1px solid rgba(255,255,255,0.04); }
 
 .modal-close{ position:absolute; top:12px; right:18px; background:transparent; border:0; font-size:22px; cursor:pointer; color:inherit; }
 
+/* 🔧 FIX: Scrollable Portfolio Modal */
+.modal {
+  max-height: 90vh;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+}
+
+.modal::-webkit-scrollbar {
+  width: 8px;
+}
+.modal::-webkit-scrollbar-thumb {
+  background: var(--accent);
+  border-radius: 8px;
+}
+.modal::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Responsive */
 @media (max-width:980px){
   .modal{ max-width:720px }
   .modal-inner{ flex-direction:column }
