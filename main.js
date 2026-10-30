@@ -1,5 +1,5 @@
 const config = {
-  instagram: "https://www.instagram.com/zidsatrip/",
+  instagram: "https://www.instagram.com/zetamagoon/",
   tiktok: "https://www.tiktok.com/@itsdannysatria",
   email: "mailto:itsdannysatria@gmail.com",
   lihatLainnya: "https://drive.google.com/drive/folders/1_FECwuLW6OCeNoNwPwGfnzcZaRMQJcer?usp=drive_link",
